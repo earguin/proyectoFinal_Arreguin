@@ -902,67 +902,19 @@ const tipoPokemones = [
 
 function imprimirProductosEnHTML(productos) {
   const contenedorProductos = document.getElementById("products-container");
-
-/*inicio quitar. Lista los tipos de pokemones  
-  productos.forEach((pro) => {
-    let spanTipo = document.createElement("p");
-    spanTipo.innerHTML = ` 
-        <span> ${pro.tipos[0]}-${pro.tipos[1]} </span>
-    `;
-    contenedorProductos.appendChild(spanTipo);
-  });
- fin - lista tipos pokemones*/
-  
-
   productos.forEach((producto) => {    
     let cardProducto = document.createElement("div");
     cardProducto.classList = "card-item";
-
-
-
-    cardProducto.innerHTML = `
-        <div class="card-inner">
-            <div class="card-front">
-                <div class="precio">$${producto.precio}</div>
-                <div class="imagen"> <img src="${producto.imagen}" /></div>
-                <div class="nombre">${producto.nombre}</div>
-            </div>
-            <div class="card-back">                
-                <div class="tipo">${producto.tipos}</div>
-                <div class="categoria">Categoría: ${producto.categoria}</div>      
-                <div class="descripcion">Descripción: ${producto.descripcion}</div>
-                <button id="btnComprar${producto.id}" >Comprar</button>
-            </div>                   
-        </div>    
-    `;
-
-/*aqui me quede, decidir si array u objeto para los tipos y colores y nombres para la clae*/
-let numTipos = producto.tipos.length
-let colores = [];
-let clase = "";
-console.log("numTipos", numTipos);
-
-/*let tipos = producto.tipos;
-for(let i in tipos){
-    let tipoMinusculas = tipos[i].toLowerCase();
+    let clase = "";
+    tipo = producto.tipos[0].toLowerCase();
     tipoPokemones.forEach((elemento) => {
-        if(tipoMinusculas === elemento.tipo)
+        if(tipo === elemento.tipo)
         {
-           clase = elemento.color;
+            clase = elemento.color;
         }                
     });       
-}*/
 
-tipo = producto.tipos[0].toLowerCase();
-tipoPokemones.forEach((elemento) => {
-    if(tipo === elemento.tipo)
-    {
-        clase = elemento.color;
-    }                
-});       
-
-
-     cardProducto.innerHTML = `
+    cardProducto.innerHTML = `
         <div class="card-inner">
             <div class="card-front">
                 <div class="precio">$${producto.precio}</div>
