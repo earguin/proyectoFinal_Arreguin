@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+#main-container
+{
+  background-image: url('./../img/back3.jpg');
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+}
+
+  #products-container {
+    display: flex;    
+    justify-content: center; 
+    align-items: baseline; 
+    flex-wrap: wrap; 
+    align-content: stretch;
+    /*background-color: #bbdefb;*/
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+  }
+
+  #products-container > .card-item{
+    width: 450px;
+    margin: 28px;
+    max-width: 450px;
+    /*background: #ffffff1e;*/
+    /*border: 3px solid #ffcc80;*/
+    height: 450px;
+    border-radius: 5px;
+    padding: 8px;    
+    position: relative;
+    text-align: center;
+    display: flex;    
+    justify-content: center; 
+    align-items: baseline; 
+    flex-wrap: wrap; 
+    align-content: stretch;
+   /* perspective: 1000px;
+    cursor: pointer;*/
+  }
+
+.card-item .precio{   
+  color: #05518f;   
+    height: 50px;    
+    position: absolute;
+    left: 80%;
+    top: 0px;
+    width: 100px;    
+    line-height: 50px;
+    font-weight: bolder; 
+    font-size: xx-large;
+    text-align: center;    
+}
+
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-item:hover .card-inner{
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back
+{
+  position: absolute;  
+  width: 100%;
+  height: 100%;      
+  backface-visibility: hidden;      
+  flex-wrap: wrap;   
+  border-radius: 50%;   
+}
+
+.card-front {
+  background: #f1f1f1d5;
+  border: 1px solid #e2d9e1;
+}
+
+.card-back.verde{
+  background-color:  #cef5dea2;
+}
+
+.card-back.verde div{
+  color:  #185833;
+}
+
+.card-back.lila{
+  background-color:  #c587f580;  
+}
+
+.card-back.lila div, .card-back.lila button{
+  color: #7416bd; 
+}
+
+.card-back.naranja{
+  background-color:  #ff5b02cf;
+}
+
+.card-back.naranja div{
+  color: #f5ceb6;
+}
+
+.card-back.azulclaro{
+  background-color:  #bedfdede;
+}
+
+.card-back.azulclaro div{
+  color:  #2f979b;  
+}
+
+.card-back.azul{
+  background-color:  #1c83a5ea;
+}
+
+.card-back.azul div{
+  color:  #8ed0e6;
+}
+
+.card-back.amarrilloverde{
+  background-color:  #a9f91d80;
+}
+
+.card-back.amarrilloverde div{
+  color:  #10660d;
+}
+
+.card-back.gris{
+  background-color:  #e2d9e180;
+}
+
+.card-back.gris div{
+  color:  #3d3c3d;
+}
+
+.card-back.amarillo{
+  background-color:  #ffd900e5;
+}
+
+.card-back.amarillo div{
+  color: 	#f8f5e4;
+}
+
+.card-back.cafe{
+  background-color:  #8f5f3280;
+}
+
+.card-back.cafe div{
+  color:  #442b13;
+}
+
+.card-back.rosa{
+  background-color:  #fa96cd93;
+}
+
+.card-back.rosa div{
+  color:  #f70556;
+}
+
+.card-back {  
+  transform: rotateY(180deg);
+}
+
+.nombre {
+    color: rgb(23, 149, 180);    
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.imagen img{
+  height: 310px;
+  max-width: 310px ;
+  max-height: 310px;
+}
+
+.tipo
+{
+  font-size: 36px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+/*
+.tipo.verde,
+{
+  color: #1d6b3e;  
+}
+
+.tipo.lila{
+  color: #7416bd; 
+  
+}
+
+.tipo.naranja{
+  color: #ff4c24;
+}
+
+.tipo.azulclaro{
+  color: #33ece6;
+}
+
+.tipo.azul{
+  color: #156079;
+}
+
+.tipo.amarilloverde{
+  color: #a9f91d;
+}
+
+.tipo.gris{
+  color: #e2d9e1;
+}
+
+.tipo.amarillo{
+  color: 	#FFD700;
+}
+
+.tipo.cafe{
+  color: #8f5f32;
+}
+
+.tipo.rosa{
+  color: #f99c88;
+}
+*/
+.descripcion{
+  font-size: 16px;
+  margin: 20px;
+}
+
+.categoria{
+  font-size: 16px;
+  margin: 20px;
+}
+
+button{
+  border: 1px solid #000;  
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: #fff;
+  color:white;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+button.verde{
+  
+  color:  #185833;
+}
+
+button.lila{
+    color: #7416bd; 
+}
+
+button.naranja{    
+  color: #ff5b02cf;
+}
+
+button.azulclaro{
+  color:  #2f979b;  
+}
+
+button.azul{  
+  color:  #1c83a5ea;
+}
+
+button.amarrilloverde{
+  
+  color:  #10660d;
+}
+
+button.gris{
+  
+  color:  #3d3c3d;
+}
+
+button.amarillo{
+  color: #ffd900e5;
+}
+
+button.cafe{
+  
+  color:  #442b13;
+}
+
+button.rosa{
+  
+  color:  #f70556;
+}
