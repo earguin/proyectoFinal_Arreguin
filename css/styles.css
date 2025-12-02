@@ -24,7 +24,6 @@ body{
     align-items: baseline; 
     flex-wrap: wrap; 
     align-content: stretch;
-    /*background-color: #bbdefb;*/
     height: 100%;
     padding: 15px;
     gap: 5px;
@@ -35,8 +34,6 @@ body{
     width: 450px;
     margin: 28px;
     max-width: 450px;
-    /*background: #ffffff1e;*/
-    /*border: 3px solid #ffcc80;*/
     height: 450px;
     border-radius: 5px;
     padding: 8px;    
@@ -47,8 +44,6 @@ body{
     align-items: baseline; 
     flex-wrap: wrap; 
     align-content: stretch;
-   /* perspective: 1000px;
-    cursor: pointer;*/
   }
 
 .card-item .precio{   
@@ -195,49 +190,6 @@ body{
   font-weight: bold;
 }
 
-/*
-.tipo.verde,
-{
-  color: #1d6b3e;  
-}
-
-.tipo.lila{
-  color: #7416bd; 
-  
-}
-
-.tipo.naranja{
-  color: #ff4c24;
-}
-
-.tipo.azulclaro{
-  color: #33ece6;
-}
-
-.tipo.azul{
-  color: #156079;
-}
-
-.tipo.amarilloverde{
-  color: #a9f91d;
-}
-
-.tipo.gris{
-  color: #e2d9e1;
-}
-
-.tipo.amarillo{
-  color: 	#FFD700;
-}
-
-.tipo.cafe{
-  color: #8f5f32;
-}
-
-.tipo.rosa{
-  color: #f99c88;
-}
-*/
 .descripcion{
   font-size: 16px;
   margin: 20px;
