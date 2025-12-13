@@ -10,12 +10,14 @@ body{
 
 #main-container
 {
-  background-image: url('./../img/back3.jpg');
+  
+  background: linear-gradient(to bottom, #c2efd5, #028550);
+/*  background-image: url('./../img/back3.jpg');
   min-height: 300px;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;    
+  background-position: center;*/
+  /*background-repeat: no-repeat;
+  background-size: cover;    */
 }
 
   #products-container {
@@ -253,4 +255,22 @@ button.cafe{
 button.rosa{
   
   color:  #f70556;
+}
+
+
+
+.productItem{
+    display: flex;    
+    justify-content: center; 
+    align-items: baseline; 
+    flex-wrap: wrap; 
+    align-content: stretch;
+    border: 1px solid #000;
+        
+    margin: 20px 15px ;
+    border-radius: 8px;
+}
+
+button{
+  color:#000
 }
