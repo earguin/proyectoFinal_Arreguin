@@ -71,7 +71,7 @@ async function imprimirProductosEnHTML(){
             });       
 
             cardProducto.innerHTML = `
-                <div class="card-inner">
+                <div class="card-inner" >
                     <div class="card-front">
                         <div class="precio">$${producto.precio}</div>
                         <div class="imagen"> <img src="${producto.imagen}" /></div>
@@ -104,7 +104,7 @@ async function imprimirProductosEnHTML(){
 
                 localStorage.setItem("carrito", JSON.stringify(carrito));
 
-                imprimirCarrito(carrito);
+                
             });
         });
 

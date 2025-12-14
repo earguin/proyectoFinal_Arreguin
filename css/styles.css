@@ -9,8 +9,7 @@ body{
 }
 
 #main-container
-{
-  
+{  
   background: linear-gradient(to bottom, #c2efd5, #028550);
 /*  background-image: url('./../img/back3.jpg');
   min-height: 300px;
@@ -257,18 +256,19 @@ button.rosa{
   color:  #f70556;
 }
 
-
-
-.productItem{
+.productoItem{
     display: flex;    
     justify-content: center; 
     align-items: baseline; 
     flex-wrap: wrap; 
     align-content: stretch;
-    border: 1px solid #000;
-        
+    border: 1px solid #10660d;        
     margin: 20px 15px ;
     border-radius: 8px;
+}
+
+.productoItem div{
+  margin:5px 10px;
 }
 
 button{
