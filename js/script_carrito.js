@@ -1,10 +1,6 @@
 function imprimirCarrito(carrito) {
     const contenedorCarrito = document.getElementById("cart-container");
     contenedorCarrito.innerHTML = '<h2>Carrito de Compras</h2>'
-    /*
-    let productoItem = document.createElement("div");
-    productoItem.classList = "productoItem";
-    */
     let total = 0;
     carrito.forEach((item, index) => 
         {       
@@ -39,20 +35,17 @@ function imprimirCarrito(carrito) {
     timer: 2000
     });
         localStorage.removeItem("carrito")
-        contenedorCarrito.innerHTML = "<h2>Carrito de compras</h2>"
-        
+        contenedorCarrito.innerHTML = "<h2>Carrito de compras</h2>"        
     });
 }
 
 function eliminarProducto(id)
 {         
     const carritoRecuperado = JSON.parse(localStorage.getItem("carrito"));
-    //console.log("carritoRecuperado:", carritoRecuperado)
     const carritoFiltrado = carritoRecuperado.filter(producto => producto.id !== id)  
     //localStorage.removeItem("carrito")
     localStorage.setItem("carrito", JSON.stringify(carritoFiltrado))  
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];        
-    console.log(carritoFiltrado)
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];   
     imprimirCarrito(carrito);
 }
 
@@ -62,11 +55,9 @@ function vaciarCarrito()
 }
 
 // Ejecución del programa
-//imprimirProductosEnHTML(productos);
-
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 if (carrito.length > 0) {
-  imprimirCarrito(carrito);
+    imprimirCarrito(carrito);
 }
 

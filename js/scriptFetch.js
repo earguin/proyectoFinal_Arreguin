@@ -58,8 +58,6 @@ async function imprimirProductosEnHTML(){
 
         const data = await response.json() 
 
-        //console.log(data)
-
         const contenedorProductos = document.getElementById("products-container");
         data.productos.forEach((producto) => {    
             let cardProducto = document.createElement("div");
@@ -102,8 +100,6 @@ async function imprimirProductosEnHTML(){
             showConfirmButton: false,
             timer: 2000
             });
-
-            //alert(`Has comprado: ${producto.nombre} por $${producto.precio}`);
 
             carrito.push({ id: producto.id, producto: producto.nombre, imagen: producto.imagen, precio: producto.precio });
 
