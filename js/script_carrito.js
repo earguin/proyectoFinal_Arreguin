@@ -30,7 +30,7 @@ function imprimirCarrito(carrito) {
     Swal.fire({
     position: "top-end",
     icon: "success",
-    title: "Grcias por tu compra",
+    title: "¡ Gracias por tu compra !",
     showConfirmButton: false,
     timer: 2000
     });
@@ -47,11 +47,6 @@ function eliminarProducto(id)
     localStorage.setItem("carrito", JSON.stringify(carritoFiltrado))  
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];   
     imprimirCarrito(carrito);
-}
-
-function vaciarCarrito()
-{
-    localStorage.removeItem("carrito")
 }
 
 // Ejecución del programa

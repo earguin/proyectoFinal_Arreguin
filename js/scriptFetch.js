@@ -51,7 +51,6 @@ const tipoPokemones = [
     }
 ]
 
-
 async function imprimirProductosEnHTML(){
     try{
         const response = await fetch("./../lista_productos.json")
@@ -92,15 +91,7 @@ async function imprimirProductosEnHTML(){
 
             // Agrego producto al carrito
             botonComprar.addEventListener("click", () => {
-            Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: `${producto.nombre}`,
-            text: "agregado al carrito",
-            showConfirmButton: false,
-            timer: 2000
-            });
-
+            
             carrito.push({ id: producto.id, producto: producto.nombre, imagen: producto.imagen, precio: producto.precio });
 
             localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -115,26 +106,10 @@ async function imprimirProductosEnHTML(){
     }
 }
 
-function imprimirCarrito(carrito) {
-    const contenedorCarrito = document.getElementById("cart-container");
-    contenedorCarrito.innerHTML = "<h2>Carrito de Compras</h2>";
-
-    carrito.forEach((item, index) => {
-        contenedorCarrito.innerHTML += `
-                <p>${index + 1}. ${item.producto} - $${item.precio}</p>
-            `;
-    });
-
-    contenedorCarrito.innerHTML += `<h3>Total: $</h3>`;
-}
 
 // Ejecución del programa
 imprimirProductosEnHTML();
 
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-if (carrito.length > 0) {
-  imprimirCarrito(carrito);
-}
 
