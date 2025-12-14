@@ -91,12 +91,20 @@ async function imprimirProductosEnHTML(){
 
             // Agrego producto al carrito
             botonComprar.addEventListener("click", () => {
-            
-            carrito.push({ id: producto.id, producto: producto.nombre, imagen: producto.imagen, precio: producto.precio });
+                Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `${producto.nombre}`,
+                text: "Producto agregado al carrito",
+                showConfirmButton: false,
+                timer: 1500
+                });           
 
-            localStorage.setItem("carrito", JSON.stringify(carrito));
+                carrito.push({ id: producto.id, producto: producto.nombre, imagen: producto.imagen, precio: producto.precio });
 
-            imprimirCarrito(carrito);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+
+                imprimirCarrito(carrito);
             });
         });
 
