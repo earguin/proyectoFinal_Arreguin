@@ -94,7 +94,16 @@ async function imprimirProductosEnHTML(){
 
             // Agrego producto al carrito
             botonComprar.addEventListener("click", () => {
-            alert(`Has comprado: ${producto.nombre} por $${producto.precio}`);
+            Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${producto.nombre}`,
+            text: "agregado al carrito",
+            showConfirmButton: false,
+            timer: 2000
+            });
+
+            //alert(`Has comprado: ${producto.nombre} por $${producto.precio}`);
 
             carrito.push({ id: producto.id, producto: producto.nombre, imagen: producto.imagen, precio: producto.precio });
 
